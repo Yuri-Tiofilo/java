@@ -6,30 +6,25 @@ import javax.swing.JOptionPane;
 public class Teste {
 
     public static void main(String[] args) {
-       Car obj1 = new Car();
-       Car obj2 = new Car();
+       Car obj1 = new Car("GM", "Onix", false, 0);//marca modelo,
        
-       obj1.motor = false;
-       obj1.marca = "GM";
-       obj1.modelo = "Onix";
-       obj1.velocidade = 0;
-       obj2.motor = false;
-       obj2.marca = "VW";
-       obj2.modelo = "Gol";
-       obj2.velocidade = 0;
+       String marca = JOptionPane.showInputDialog("Infome a marca:");
+       String modelo = JOptionPane.showInputDialog("Infome o modelo:");
+       float velocidade = Float.parseFloat(JOptionPane.showInputDialog("Infome a velocidade:"));
        
-       // liga obj1 
-       obj1.ligaMotor();
-       // liga ob2
-       obj2.ligaMotor();
        
-       // acelerar
+       int aux = JOptionPane.showConfirmDialog(null, "O motor está ligado?", "Titulo", JOptionPane.YES_NO_OPTION);
        
-       obj1.acelera(80);
-       obj2.acelera(120);
        
-        JOptionPane.showMessageDialog(null, obj1.modelo + "  " + obj1.marca + "  " + obj1.velocidade);
-        JOptionPane.showMessageDialog(null, obj2.modelo + "  " + obj2.marca + "  " + obj2.velocidade);
+       boolean motor = (aux ==  JOptionPane.YES_NO_OPTION);
+       
+       
+       
+       Car obj2 = new Car(marca, modelo, motor, velocidade);
+      
+       
+        JOptionPane.showMessageDialog(null, obj1.toString());
+        JOptionPane.showMessageDialog(null, obj2.toString());
        
     }
     
