@@ -12,7 +12,7 @@ public class Main {
        float preco = Float.parseFloat(JOptionPane.showInputDialog("Infome o preço:"));
        
        int quantidade = Integer.parseInt(JOptionPane.showInputDialog("Infome a quantidade:"));
-       
+        
        Product product2 = new Product(id, descricao, quantidade, preco);
         
        product2.comprar(4);
