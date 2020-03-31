@@ -14,7 +14,7 @@ public final class Cliente {
     }
 
     public void setNumeroConta(String x) {
-        if (x.length() == 8) {
+        if ((x.length() == 8) && (x.charAt(6) == '-')){
             this.numeroConta = x;
         } else {
             JOptionPane.showMessageDialog(null,"Digite o numero da conta correto");
@@ -27,7 +27,9 @@ public final class Cliente {
     }
 
     public void setNumeroAgencia(String numeroAgencia) {
-        this.numeroAgencia = numeroAgencia;
+        if((numeroAgencia.length() == 8) && (numeroAgencia.charAt(4) == '-'))
+            this.numeroAgencia = numeroAgencia;
+        else JOptionPane.showMessageDialog(null,"Digite o nome menor que 30 caracteres"); 
     }
 
     public String getNome() {
@@ -74,11 +76,11 @@ public final class Cliente {
 
 
     public void realizarDeposito(float valor) {
-        this.setSaldo(this.saldo += valor);
+        this.setSaldo(this.saldo + valor);
     }
 
     public void realizarSaque(float valor) {
-        this.setSaldo(this.saldo -= valor);
+        this.setSaldo(this.saldo - valor);
     }
 
     @Override
