@@ -1,7 +1,7 @@
 package br.com.unifacef.dc.lista3.ex01;
 import java.util.Date;
 
-public class Reserva {
+public final class Reserva {
    private int codigo;
    private Date data;
    

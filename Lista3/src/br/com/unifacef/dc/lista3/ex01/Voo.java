@@ -1,7 +1,7 @@
 package br.com.unifacef.dc.lista3.ex01;
 
 
-public class Voo {
+public final class Voo {
     private String numero;
     private String destino;
 

@@ -13,13 +13,26 @@ public class Teste {
        
        obj2.setConta(obj1);
        obj2.setCvv(123);
-       obj2.setLimite(1000);
+       
        obj2.setNumeroCartao("1222222222222");
        obj2.setSenha("123");
        obj2.setValidade("10/2021");
        
        System.out.println(obj2.toString());
        
+       
+       if(obj2.compra(600, "123")) {
+           System.out.println("Comopra realizada com sucesso");
+           
+       }else {
+           System.out.println("Comopra não realizada");
+       }
+       if(obj2.compra(600, "123")) {
+           System.out.println("Comopra realizada com sucesso");
+           
+       }else {
+           System.out.println("Comopra não realizada");
+       }
        
     }
     

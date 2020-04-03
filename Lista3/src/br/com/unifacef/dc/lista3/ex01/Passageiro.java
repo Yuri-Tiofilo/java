@@ -1,7 +1,7 @@
 
 package br.com.unifacef.dc.lista3.ex01;
 
-public class Passageiro {
+public final class Passageiro {
     private String nome;
     private String cpf;
     

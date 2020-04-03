@@ -3,7 +3,7 @@ import javax.swing.JOptionPane;
 
 public final class CartaoDebito {
     private String numeroCartao;
-    private float limite;
+   
     private int cvv;
     private String senha;
     private String validade;
@@ -16,16 +16,13 @@ public final class CartaoDebito {
     
     public CartaoDebito(String numeroCartao, float limite, int cvv, String senha, String validade, Conta conta) {
         this.setNumeroCartao(this.numeroCartao);
-        this.setLimite(this.limite);
+        // this.setLimite(this.limite);
         this.setCvv(this.cvv);
         this.setSenha(this.senha);
         this.setValidade(this.validade);
         this.setConta(this.conta);
     }
-    
-    
-            
-
+   
     public String getNumeroCartao() {
         return numeroCartao;
     }
@@ -34,13 +31,7 @@ public final class CartaoDebito {
         this.numeroCartao = numeroCartao;
     }
 
-    public float getLimite() {
-        return limite;
-    }
-
-    public void setLimite(float limite) {
-        this.limite = limite;
-    }
+   
 
     public int getCvv() {
         return cvv;
@@ -77,8 +68,20 @@ public final class CartaoDebito {
 
     @Override
     public String toString() {
-        return "CartaoDebito{" + "numeroCartao=" + numeroCartao + ", limite=" + limite + ", cvv=" + cvv + ", senha=" + senha + ", validade=" + validade + ", conta=" + conta + '}';
+        return "CartaoDebito{" + "numeroCartao=" + numeroCartao + ", cvv=" + cvv + ", senha=" + senha + ", validade=" + validade + ", conta=" + conta + '}';
     }
+    public boolean compra(float valor, String senha) {
+        if(senha.equals(this.senha)) {
+          if(valor <= this.conta.getSaldo()) {
+              this.conta.setSaldo(this.conta.getSaldo() - valor);
+              return true;
+          } else return false;
+            
+            
+        } 
+        else return false;
+    }
+    
     
     
     
