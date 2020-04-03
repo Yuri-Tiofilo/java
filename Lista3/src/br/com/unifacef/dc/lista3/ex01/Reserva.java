@@ -1,9 +1,10 @@
 package br.com.unifacef.dc.lista3.ex01;
+
 import java.util.Date;
 
 public final class Reserva {
    private int codigo;
-   private Date data;
+   private Date datas;
    
    // associação
    private Voo voo;
@@ -15,7 +16,9 @@ public final class Reserva {
         this.setVoo(voo);
         this.setPassageiro(passageito);
     }
-
+    
+    
+    
     Reserva() {
          
     }
@@ -29,11 +32,11 @@ public final class Reserva {
     }
 
     public Date getData() {
-        return data;
+        return datas;
     }
 
     public void setData(Date data) {
-        this.data = data;
+        this.datas = data;
     }
 
     public Voo getVoo() {
@@ -54,7 +57,7 @@ public final class Reserva {
 
     @Override
     public String toString() {
-        return "Reserva{" + "codigo=" + this.codigo + ", data=" + this.data + ", voo=" + this.voo + ", passageiro=" + this.passageiro + '}';
+        return "Reserva{" + "codigo=" + this.codigo + ", data=" + this.datas + ", voo=" + this.voo + ", passageiro=" + this.passageiro + '}';
     }
     
     
