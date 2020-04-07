@@ -1,4 +1,4 @@
-package br.com.unifacef.dc.lista3.ex02;
+package br.com.unifacef.dc.lista3.ex2.corrigido;
 
 public final class Passanger {
     private String rg;
@@ -32,7 +32,7 @@ public final class Passanger {
 
     @Override
     public String toString() {
-        return "Passanger{" + "rg=" + rg + ", nome=" + nome + '}';
+        return "Passanger{" + "rg=" + this.getRg() + ", nome=" + this.getNome() + '}';
     }
     
     
